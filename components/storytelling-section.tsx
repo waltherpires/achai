@@ -5,16 +5,16 @@ export function StorytellingSection() {
     <section className="relative bg-primary py-16 md:py-24 text-primary-foreground">
       <div className="absolute inset-0 opacity-40">
         <div className="absolute top-10 left-2 sm:top-15 sm:left-10 w-14 h-14 lg:w-18 lg:h-18 rounded-full bg-accent  animate-bounce">
-          <Image src="/images/logo.png" alt="logo" width={100} height={100} />
+          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
         </div>
         <div className="absolute top-20 sm:top-50 right-2 sm:right-20 w-12 h-12 lg:w-16 lg:h-16  rounded-full bg-secondary animate-bounce delay-1000">
-          <Image src="/images/logo.png" alt="logo" width={100} height={100} />
+          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
         </div>
         <div className="absolute bottom-14 left-2 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-lime-500 animate-bounce delay-500">
-          <Image src="/images/logo.png" alt="logo" width={100} height={100} />
+          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
         </div>
         <div className="absolute bottom-5 right-5 w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-secondary animate-bounce delay-700">
-          <Image src="/images/logo.png" alt="logo" width={100} height={100} />
+          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
         </div>
       </div>
       <div className="container mx-auto px-4">
