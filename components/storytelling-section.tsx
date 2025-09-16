@@ -4,10 +4,10 @@ export function StorytellingSection() {
   return (
     <section className="relative bg-primary py-16 md:py-24 text-primary-foreground">
       <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-10 left-5 sm:top-15 sm:left-10 w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-accent  animate-bounce">
+        <div className="absolute top-10 left-4 sm:top-15 sm:left-10 w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-accent  animate-bounce">
           <Image src="/images/logo.png" alt="logo" width={100} height={100} />
         </div>
-        <div className="absolute top-20 sm:top-50 right-10 sm:right-20 w-12 h-12 lg:w-16 lg:h-16  rounded-full bg-secondary animate-bounce delay-1000">
+        <div className="absolute top-20 sm:top-50 right-8 sm:right-20 w-12 h-12 lg:w-16 lg:h-16  rounded-full bg-secondary animate-bounce delay-1000">
           <Image src="/images/logo.png" alt="logo" width={100} height={100} />
         </div>
         <div className="absolute bottom-20 left-3 w-15 h-15  sm:w-20 sm:h-20 rounded-full bg-lime-500 animate-bounce delay-500">
