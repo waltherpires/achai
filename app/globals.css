@@ -1,27 +1,126 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Updated color palette to açaí theme */
+  --background: #f9f7fb; /* Off-White Lilac */
+  --foreground: #4b2c48; /* Açaí Purple */
+  --card: #ffffff; /* White for cards */
+  --card-foreground: #4b2c48; /* Açaí Purple */
+  --popover: #ffffff; /* White for popovers */
+  --popover-foreground: #4b2c48; /* Açaí Purple */
+  --primary: #4b2c48; /* Açaí Purple */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #9d7ba8; /* Soft Lavender */
+  --secondary-foreground: #4b2c48; /* Açaí Purple */
+  --muted: #f3f1f5; /* Lighter lilac for muted elements */
+  --muted-foreground: #6b5b73; /* Muted purple */
+  --accent: #e3b23c; /* Mustard Yellow */
+  --accent-foreground: #4b2c48; /* Açaí Purple */
+  --destructive: #dc2626; /* Red for errors */
+  --destructive-foreground: #ffffff; /* White text on destructive */
+  --border: #e5e1e8; /* Light purple-gray for borders */
+  --input: #ffffff; /* White for input fields */
+  --ring: #e3b23c; /* Mustard Yellow for focus rings */
+  --chart-1: #e3b23c; /* Mustard Yellow */
+  --chart-2: #9d7ba8; /* Soft Lavender */
+  --chart-3: #4b2c48; /* Açaí Purple */
+  --chart-4: #f9f7fb; /* Off-White Lilac */
+  --chart-5: #6b5b73; /* Muted purple */
+  --radius: 0.75rem; /* Slightly more rounded for friendly feel */
+  --sidebar: #ffffff; /* Sidebar background */
+  --sidebar-foreground: #4b2c48; /* Açaí Purple for sidebar text */
+  --sidebar-primary: #9d7ba8; /* Soft Lavender for primary sidebar */
+  --sidebar-primary-foreground: #4b2c48; /* Açaí Purple for primary sidebar text */
+  --sidebar-accent: #e3b23c; /* Mustard Yellow for sidebar accents */
+  --sidebar-accent-foreground: #4b2c48; /* Açaí Purple for sidebar accent text */
+  --sidebar-border: #e5e1e8; /* Light purple-gray for sidebar borders */
+  --sidebar-ring: #e3b23c; /* Mustard Yellow for sidebar focus rings */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark {
+  --background: #2a1a2e; /* Dark açaí purple */
+  --foreground: #f9f7fb; /* Off-White Lilac */
+  --card: #3d2a42; /* Darker purple for cards */
+  --card-foreground: #f9f7fb; /* Off-White Lilac */
+  --popover: #3d2a42; /* Darker purple for popovers */
+  --popover-foreground: #f9f7fb; /* Off-White Lilac */
+  --primary: #9d7ba8; /* Soft Lavender */
+  --primary-foreground: #2a1a2e; /* Dark açaí purple */
+  --secondary: #4b2c48; /* Açaí Purple */
+  --secondary-foreground: #f9f7fb; /* Off-White Lilac */
+  --muted: #4b2c48; /* Açaí Purple */
+  --muted-foreground: #b8a5c0; /* Light purple */
+  --accent: #e3b23c; /* Mustard Yellow */
+  --accent-foreground: #2a1a2e; /* Dark açaí purple */
+  --destructive: #ef4444; /* Lighter red for dark mode */
+  --destructive-foreground: #f9f7fb; /* Off-White Lilac */
+  --border: #4b2c48; /* Açaí Purple for borders */
+  --input: #3d2a42; /* Darker purple for input fields */
+  --ring: #e3b23c; /* Mustard Yellow for focus rings */
+  --chart-1: #e3b23c; /* Mustard Yellow */
+  --chart-2: #9d7ba8; /* Soft Lavender */
+  --chart-3: #f9f7fb; /* Off-White Lilac */
+  --chart-4: #4b2c48; /* Açaí Purple */
+  --chart-5: #b8a5c0; /* Light purple */
+  --sidebar: #2a1a2e; /* Dark açaí purple */
+  --sidebar-foreground: #f9f7fb; /* Off-White Lilac */
+  --sidebar-primary: #9d7ba8; /* Soft Lavender */
+  --sidebar-primary-foreground: #2a1a2e; /* Dark açaí purple */
+  --sidebar-accent: #e3b23c; /* Mustard Yellow */
+  --sidebar-accent-foreground: #2a1a2e; /* Dark açaí purple */
+  --sidebar-border: #4b2c48; /* Açaí Purple */
+  --sidebar-ring: #e3b23c; /* Mustard Yellow */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply bg-background text-foreground;
   }
 }
