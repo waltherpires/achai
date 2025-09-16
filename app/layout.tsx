@@ -1,16 +1,26 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Urbanist, DM_Sans } from "next/font/google";
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  variable: "--font-urbanist",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dmsans",
+});
+
 export const metadata: Metadata = {
   title: "Achaí - Achados e Perdidos Universitários",
   description:
     "Conectamos estudantes para que seus pertences voltem rapidamente e em segurança. Sistema de achados e perdidos para universidades.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -20,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`${urbanist.variable} ${dmSans.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
