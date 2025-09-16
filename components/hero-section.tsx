@@ -5,10 +5,10 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background py-20 lg:py-32">
       <div className="absolute inset-0 opacity-60">
-        <div className="absolute top-10 left-5 sm:top-20 sm:left-10 w-16 h-16 rounded-full bg-secondary animate-bounce">
+        <div className="absolute top-10 left-4 sm:top-20 sm:left-10 w-16 h-16 rounded-full bg-secondary animate-bounce">
           <Image src="/images/logo.png" alt="logo" width={100} height={100} />
         </div>
-        <div className="absolute top-20 sm:top-40 right-14 w-12 h-12 rounded-full bg-accent animate-bounce delay-1000">
+        <div className="absolute top-16 sm:top-40 right-4 w-12 h-12 rounded-full bg-accent animate-bounce delay-1000">
           <Image src="/images/logo.png" alt="logo" width={100} height={100} />
         </div>
         <div className="absolute bottom-20 left-3 lg:left-15 w-15 h-15  sm:w-20 sm:h-20 rounded-full bg-primary animate-bounce delay-500">
