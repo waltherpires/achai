@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
+import Image from "next/image"
 
 export function GoogleFormCTA() {
   return (
@@ -7,8 +8,8 @@ export function GoogleFormCTA() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-8">
-            <div className="w-24 h-24 mx-auto mb-6 bg-primary/20 rounded-full flex items-center justify-center border border-primary/30">
-              <div className="text-4xl">📝</div>
+            <div className="w-24 h-24 mx-auto mb-6 bg-lime-200 rounded-full flex items-center justify-center border border-primary/30">
+              <div className="text-4xl"><Image alt="formulario achai" src="/images/acai.png" width={100} height={100} /></div>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-balance mb-6">Perdeu ou achou algo?</h2>
             <p className="text-lg text-muted-foreground text-pretty mb-8">
