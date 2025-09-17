@@ -57,7 +57,7 @@ export function StorytellingSection() {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1 md:order-1 text-center md:text-right">
               <h3 className="text-2xl font-bold mb-4 text-primary-foreground">
-                2. Informando a Perda
+                2. Informando a perda
               </h3>
               <p className="text-left md:text-right md:text-md lg:text-lg text-primary-foreground leading-relaxed">
                 Decidido a tentar recuperar seu fone, João acessou o site e
