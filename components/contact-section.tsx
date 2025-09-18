@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Users } from "lucide-react";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 
 export function ContactSection() {
