@@ -57,7 +57,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-8 text-muted-foreground text-sm">
+          <div className="flex flex-wrap  justify-start sm:justify-center items-center gap-8 text-muted-foreground text-sm">
             <span className="flex items-center gap-2"><Image src="/images/logo.png" alt="logo" width={24} height={24} className="bg-lime-300 rounded-full"/> Feito por estudantes, para estudantes</span>
             <span className="flex items-center gap-2"><Image src="/images/logo.png" alt="logo" width={24} height={24} className="bg-accent rounded-full"/> Sem cadastro complicado</span>
             <span className="flex items-center gap-2"><Image src="/images/logo.png" alt="logo" width={24} height={24} className="bg-secondary rounded-full"/> Conexão rápida e direta</span>
