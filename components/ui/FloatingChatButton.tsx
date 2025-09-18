@@ -3,32 +3,36 @@
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
 
-export function FloatingChatButton({ url, title, text }: { url: string; title: string; text: string; }) {
-  const handleShare = async () => {
-    const shareData = {
-      title: title,
-      text: text,
-      url: url,
-    };
+interface WhatsAppShareButtonProps {
+  url: string;
+  text: string;
+}
 
-    // 1. Tenta usar a Web Share API (o método moderno)
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData);
-        console.log("Conteúdo compartilhado com sucesso!");
-      } catch (err) {
-        // O erro mais comum é o usuário fechar a caixa de compartilhamento.
-        console.error("Erro ao compartilhar:", err);
-      }
+export function FloatingChatButton({
+  url,
+  text,
+}: {
+  url: string;
+  text: string;
+}) {
+  const handleShare = () => {
+    const message = `${text}\n\n${url}`;
+    const encodedMessage = encodeURIComponent(message);
+
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    let finalUrl;
+
+    if (isMobile) {
+      finalUrl = `whatsapp://send?text=${encodedMessage}`;
     } else {
-      // 2. Fallback: Se a API não existir, usa o link direto do WhatsApp
-      console.log("Web Share API não suportada, usando fallback do WhatsApp.");
-      const message = `${text}\n\n${url}`;
-      const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `whatsapp://send?text=${encodedMessage}`;
-      
-      window.location.href = whatsappUrl;
+      finalUrl = `https://web.whatsapp.com/send?text=${encodedMessage}`;
     }
+
+    window.open(finalUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
