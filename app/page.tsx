@@ -13,7 +13,7 @@ export default function HomePage() {
       <ContactSection />
       <FloatingChatButton
         url="https://achai-mu.vercel.app"
-        text="Opa, tudo bem? Lembrei de você! Achei esse site de achados e perdidos da faculdade. Dá uma olhada"
+        text="Opa, tudo bem? Lembrei de você! Achei esse site de achados e perdidos da faculdade. Dá uma olhada."
       />
     </main>
   );

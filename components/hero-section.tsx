@@ -20,6 +20,7 @@ export function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+        
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-8">
             <div className="text-primary-foreground p-4 rounded-full mr-4">

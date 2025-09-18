@@ -5,16 +5,36 @@ export function StorytellingSection() {
     <section className="relative bg-primary py-16 md:py-24 text-primary-foreground">
       <div className="absolute inset-0 opacity-40">
         <div className="absolute top-10 left-2 sm:top-15 sm:left-10 w-14 h-14 lg:w-18 lg:h-18 rounded-full bg-accent  animate-bounce">
-          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
+          <Image
+            src="/images/logo-bussola.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </div>
         <div className="absolute top-20 sm:top-50 right-2 sm:right-20 w-12 h-12 lg:w-16 lg:h-16  rounded-full bg-secondary animate-bounce delay-1000">
-          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
+          <Image
+            src="/images/logo-bussola.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </div>
         <div className="absolute bottom-14 left-2 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-lime-500 animate-bounce delay-500">
-          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
+          <Image
+            src="/images/logo-bussola.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </div>
         <div className="absolute bottom-5 right-5 w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-secondary animate-bounce delay-700">
-          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
+          <Image
+            src="/images/logo-bussola.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
       <div className="container mx-auto px-4">
@@ -29,7 +49,6 @@ export function StorytellingSection() {
         </div>
 
         <div className="max-w-5xl mx-auto space-y-16">
-          {/* Step 1: Perde - Image Left, Text Right */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1 md:order-2 text-center md:text-left">
               <h3 className="text-2xl font-bold mb-4 text-primary-foreground">
@@ -53,7 +72,6 @@ export function StorytellingSection() {
             </div>
           </div>
 
-          {/* Step 2: Encontra - Text Left, Image Right */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1 md:order-1 text-center md:text-right">
               <h3 className="text-2xl font-bold mb-4 text-primary-foreground">
@@ -77,7 +95,6 @@ export function StorytellingSection() {
             </div>
           </div>
 
-          {/* Step 3: Encontra - Text Left, Image Right */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1 md:order-2 text-center md:text-left">
               <h3 className="text-2xl font-bold mb-4 text-primary-foreground">
@@ -100,8 +117,6 @@ export function StorytellingSection() {
               </div>
             </div>
           </div>
-
-          {/* Step 3: Conecta - Image Left, Text Right */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1 md:order-1 text-center md:text-right">
               <h3 className="text-2xl font-bold mb-4 text-primary-foreground">
@@ -125,7 +140,6 @@ export function StorytellingSection() {
             </div>
           </div>
         </div>
-
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-8 py-4 rounded-full border border-primary/30">
             <span className="text-primary-foreground font-medium">
