@@ -1,7 +1,7 @@
-// components/ContactSection.jsx
+
 
 import { Button } from "@/components/ui/button";
-import { QrCode, Mail, Instagram } from "lucide-react"; // Usando ícones do Lucide para consistência
+import { Mail, Instagram } from "lucide-react"; 
 import Image from "next/image";
 
 export function ContactSection() {
@@ -28,7 +28,7 @@ export function ContactSection() {
               <p className="text-sm text-muted-foreground mb-4 flex-grow">
                 Para dúvidas gerais e sugestões
               </p>
-              <Button variant="outline" size="sm" asChild>
+              <Button variant="outline" size="sm" disabled>
                 <a href="mailto:contato@achai.com">contato@achai.com</a>
               </Button>
             </div>
@@ -69,7 +69,7 @@ export function ContactSection() {
               <p className="text-sm text-muted-foreground mb-4 flex-grow">
                 Para contato mais rápido
               </p>
-              <Button variant="outline" size="sm" asChild>
+              <Button variant="outline" size="sm" disabled>
                 <a
                   href="URL_DO_SEU_INSTAGRAM"
                   target="_blank"

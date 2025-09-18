@@ -34,7 +34,7 @@ export function GoogleFormCTA() {
               asChild
             >
               <a
-                href="#"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSel5G-FFqZqbxEuKATydCoRZdatsQhMpqMiVq_yPslKbscq5g/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
@@ -45,7 +45,7 @@ export function GoogleFormCTA() {
             </Button>
 
             <p className="text-sm text-muted-foreground">
-              Leva menos de 2 minutos para preencher
+              Leva apenas alguns minutos para preencher
             </p>
           </div>
 
