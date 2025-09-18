@@ -1,7 +1,8 @@
-import { HeroSection } from "@/components/hero-section"
-import { StorytellingSection } from "@/components/storytelling-section"
-import { GoogleFormCTA } from "@/components/google-form-cta"
-import { ContactSection } from "@/components/contact-section"
+import { HeroSection } from "@/components/hero-section";
+import { StorytellingSection } from "@/components/storytelling-section";
+import { GoogleFormCTA } from "@/components/google-form-cta";
+import { ContactSection } from "@/components/contact-section";
+import { FloatingChatButton } from "@/components/ui/FloatingChatButton";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,11 @@ export default function HomePage() {
       <StorytellingSection />
       <GoogleFormCTA />
       <ContactSection />
+      <FloatingChatButton
+        url="https://achai-mu.vercel.app"
+        title="Achaí"
+        text="Opa, tudo bem? Lembrei de você! Achei esse site de achados e perdidos da faculdade. Dá uma olhada"
+      />
     </main>
-  )
+  );
 }
