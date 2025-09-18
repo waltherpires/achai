@@ -8,13 +8,7 @@ interface WhatsAppShareButtonProps {
   text: string;
 }
 
-export function FloatingChatButton({
-  url,
-  text,
-}: {
-  url: string;
-  text: string;
-}) {
+export function FloatingChatButton({ url, text }: WhatsAppShareButtonProps) {
   const handleShare = () => {
     const message = `${text}\n\n${url}`;
     const encodedMessage = encodeURIComponent(message);
@@ -29,10 +23,10 @@ export function FloatingChatButton({
     if (isMobile) {
       finalUrl = `whatsapp://send?text=${encodedMessage}`;
     } else {
-      finalUrl = `https://web.whatsapp.com/send?text=${encodedMessage}`;
+      finalUrl = `https://api.whatsapp.com/send?text=${encodedMessage}`;
     }
 
-    window.open(finalUrl, "_blank", "noopener,noreferrer");
+    window.open(finalUrl, "_blank");
   };
 
   return (
