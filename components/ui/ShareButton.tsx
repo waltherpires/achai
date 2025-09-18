@@ -2,14 +2,22 @@
 
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
+import * as gtag from '@/lib/gtag';
 
 interface WhatsAppShareButtonProps {
   url: string;
   text: string;
 }
 
-export function FloatingChatButton({ url, text }: WhatsAppShareButtonProps) {
-  const handleShare = () => {
+export function ShareButton({ url, text }: WhatsAppShareButtonProps) {
+  const handleClick = () => {
+    gtag.event({
+      action: 'click',
+      category: 'Compartilhamento',
+      label: 'Botão de Compartilhar no Whatsapp',
+      value: 1,
+    })
+
     const message = `${text}\n\n${url}`;
     const encodedMessage = encodeURIComponent(message);
 
@@ -31,7 +39,7 @@ export function FloatingChatButton({ url, text }: WhatsAppShareButtonProps) {
 
   return (
     <Button
-      onClick={handleShare}
+      onClick={handleClick}
       className="flex fixed bottom-6 right-6 rounded-4xl shadow-lg z-50            
         transition-transform duration-200 ease-in-out hover:scale-110 bg-lime-500 hover:bg-lime-600"
     >
