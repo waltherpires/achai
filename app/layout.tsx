@@ -50,15 +50,6 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${urbanist.variable} ${dmSans.variable}`}>
-        <p
-          style={{
-            backgroundColor: "yellow",
-            padding: "10px",
-            textAlign: "center",
-          }}
-        >
-          ID de Teste do GA: {gaId || "VARIÁVEL NÃO ENCONTRADA"}
-        </p>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
