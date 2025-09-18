@@ -5,7 +5,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { Suspense } from "react";
 import "./globals.css";
 import Script from "next/script";
-import * as gtag from "@/lib/gtag";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
