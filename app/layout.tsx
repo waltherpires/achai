@@ -28,26 +28,37 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="pt-BR">
       <head>
+        <Script
+          id="google-analytics-config"
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        />
         <Script id="google-analytics-config" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${gtag.GA_TRACKING_ID}', {
+            gtag('config', '${gaId}', {
               page_path: window.location.pathname,
             });
         `}
         </Script>
-        <Script
-          id="google-analytics-config"
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-        />
       </head>
       <body className={`${urbanist.variable} ${dmSans.variable}`}>
+        <p
+          style={{
+            backgroundColor: "yellow",
+            padding: "10px",
+            textAlign: "center",
+          }}
+        >
+          ID de Teste do GA: {gaId || "VARIÁVEL NÃO ENCONTRADA"}
+        </p>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
