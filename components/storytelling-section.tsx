@@ -4,7 +4,7 @@ export function StorytellingSection() {
   return (
     <section className="relative bg-primary py-16 md:py-24 text-primary-foreground">
       <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-10 left-2 sm:top-15 sm:left-10 w-14 h-14 lg:w-18 lg:h-18 rounded-full bg-accent  animate-bounce">
+        <div className="absolute top-10 left-2 sm:top-15 sm:left-10 w-14 h-14 lg:w-18 lg:h-18 rounded-full  bg-lime-500 animate-bounce">
           <Image
             src="/images/logo-bussola.png"
             alt="logo"
@@ -20,7 +20,7 @@ export function StorytellingSection() {
             height={100}
           />
         </div>
-        <div className="absolute bottom-14 left-2 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-lime-500 animate-bounce delay-500">
+        <div className="absolute bottom-14 left-2 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-accent animate-bounce delay-500">
           <Image
             src="/images/logo-bussola.png"
             alt="logo"
