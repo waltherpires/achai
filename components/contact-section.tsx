@@ -1,7 +1,5 @@
-
-
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram } from "lucide-react"; 
+import { Mail, Instagram } from "lucide-react";
 import Image from "next/image";
 
 export function ContactSection() {
@@ -20,8 +18,8 @@ export function ContactSection() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="order-1 sm:order-0 bg-card border rounded-lg p-8 text-center flex flex-col items-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+            <div className="order-1 md:order-0 bg-card border rounded-lg p-8 text-center flex flex-col items-center">
+              <div className="w-16 h-16 mx-auto mt-6 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                 <Mail className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-semibold mb-2 text-lg">Email</h3>
@@ -62,7 +60,7 @@ export function ContactSection() {
             </div>
 
             <div className="bg-card border rounded-lg p-8 text-center flex flex-col items-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mt-6 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                 <Instagram className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-semibold mb-2 text-lg">Instagram</h3>
