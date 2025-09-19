@@ -142,9 +142,23 @@ export function StorytellingSection() {
         </div>
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-8 py-4 rounded-full border border-primary/30">
+            <Image
+              src="/images/acai.png"
+              alt="acai"
+              width={24}
+              height={24}
+              className="bg-secondary rounded-full"
+            />
             <span className="text-primary-foreground font-medium">
-              💜 Simples assim! Solidariedade estudantil em ação
+              Simples assim! Solidariedade estudantil em ação
             </span>
+            <Image
+              src="/images/acai.png"
+              alt="acai"
+              width={24}
+              height={24}
+              className="bg-secondary rounded-full"
+            />
           </div>
         </div>
       </div>
