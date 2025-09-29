@@ -6,15 +6,24 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-background py-20 lg:py-32">
       <div className="absolute inset-0 opacity-60">
         <div className="absolute top-10 left-4 sm:top-20 sm:left-10 w-16 h-16 rounded-full bg-secondary animate-bounce">
-          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
+          <Image
+            src="/images/logo-bussola.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </div>
         <div className="absolute bottom-5 right-5 w-12 h-12 rounded-full bg-accent animate-bounce delay-700">
-          <Image src="/images/logo-bussola.png" alt="logo" width={100} height={100} />
+          <Image
+            src="/images/logo-bussola.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-8">
             <div className="text-primary-foreground p-4 rounded-full mr-4">
@@ -45,22 +54,63 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              asChild
             >
-              Informe seu Achado!
+              <a
+                href="https://forms.gle/9wwsyHU4CPKbhaJT6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Informe seu Achado!
+              </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg rounded-xl transition-all duration-300 bg-transparent"
+              asChild
             >
-              Procurar Item Perdido
+              <a
+                href="https://forms.gle/ycBSR4HQWLXfKSWK8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Procurar Item Perdido
+              </a>
             </Button>
           </div>
 
           <div className="flex flex-wrap  justify-start sm:justify-center items-center gap-8 text-muted-foreground text-sm">
-            <span className="flex items-center gap-2"><Image src="/images/logo.png" alt="logo" width={24} height={24} className="bg-lime-300 rounded-full"/> Feito por estudantes, para estudantes</span>
-            <span className="flex items-center gap-2"><Image src="/images/logo.png" alt="logo" width={24} height={24} className="bg-accent rounded-full"/> Sem cadastro complicado</span>
-            <span className="flex items-center gap-2"><Image src="/images/logo.png" alt="logo" width={24} height={24} className="bg-secondary rounded-full"/> Conexão rápida e direta</span>
+            <span className="flex items-center gap-2">
+              <Image
+                src="/images/logo.png"
+                alt="logo"
+                width={24}
+                height={24}
+                className="bg-lime-300 rounded-full"
+              />{" "}
+              Feito por estudantes, para estudantes
+            </span>
+            <span className="flex items-center gap-2">
+              <Image
+                src="/images/logo.png"
+                alt="logo"
+                width={24}
+                height={24}
+                className="bg-accent rounded-full"
+              />{" "}
+              Sem cadastro complicado
+            </span>
+            <span className="flex items-center gap-2">
+              <Image
+                src="/images/logo.png"
+                alt="logo"
+                width={24}
+                height={24}
+                className="bg-secondary rounded-full"
+              />{" "}
+              Conexão rápida e direta
+            </span>
           </div>
         </div>
       </div>
