@@ -34,7 +34,7 @@ export function GoogleFormCTA() {
               asChild
             >
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSel5G-FFqZqbxEuKATydCoRZdatsQhMpqMiVq_yPslKbscq5g/viewform"
+                href="https://forms.gle/ycBSR4HQWLXfKSWK8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
