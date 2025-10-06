@@ -70,7 +70,7 @@ export function ContactSection() {
                   <Label htmlFor="message">Mensagem</Label>
                   <Textarea name="message" id="message" rows={5} required />
                 </div>
-                
+                <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value="https://achai-mu.vercel.app/obrigado" />
                 <input type="hidden" name="_subject" value="Nova mensagem do site Achaí!" />
                 <input type="text" name="_honey" style={{ display: "none" }} />
