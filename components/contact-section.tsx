@@ -7,35 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 
 export function ContactSection() {
-  const [status, setStatus] = useState("Enviar Mensagem");
-
   const recipientEmail = process.env.NEXT_PUBLIC_RECIPIENT_EMAIL;
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStatus("Enviando...");
-    const form = event.currentTarget;
-    const data = new FormData(form);
-    
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        setStatus("Enviada com sucesso!");
-        form.reset();
-        setTimeout(() => setStatus("Enviar Mensagem"), 3000);
-      } else {
-        setStatus("Erro. Tente novamente.");
-      }
-    } catch (error) {
-      console.error("Erro no envio do formulário:", error);
-      setStatus("Erro. Tente novamente.");
-    }
-  };
-
+  
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -55,7 +28,6 @@ export function ContactSection() {
               <form
                 action={`https://formsubmit.co/${recipientEmail}`}
                 method="POST"
-                onSubmit={handleSubmit}
                 className="space-y-4"
               >
                 <div>
@@ -70,13 +42,23 @@ export function ContactSection() {
                   <Label htmlFor="message">Mensagem</Label>
                   <Textarea name="message" id="message" rows={5} required />
                 </div>
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://achai-mu.vercel.app/obrigado" />
-                <input type="hidden" name="_subject" value="Nova mensagem do site Achaí!" />
+
+                <input type="hidden" name="_captcha" value="true" />
+
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://achai-mu.vercel.app/obrigado"
+                />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Nova mensagem do site Achaí!"
+                />
                 <input type="text" name="_honey" style={{ display: "none" }} />
-                
+
                 <Button type="submit" className="w-full">
-                  {status}
+                  Enviar Mensagem
                 </Button>
               </form>
             </div>
@@ -86,7 +68,7 @@ export function ContactSection() {
             <div className="inline-flex items-center gap-2 bg-card px-6 py-3 rounded-full border">
               <Image
                 src="/images/logo-bussola.png"
-                alt="logo-bussoola"
+                alt="logo-bussola"
                 width={50}
                 height={50}
               />
