@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/hero-section";
 import { StorytellingSection } from "@/components/storytelling-section";
 import { GoogleFormCTA } from "@/components/google-form-cta";
 import { ContactSection } from "@/components/contact-section";
-import { ShareButton } from "@/components/ui/ShareButton";
+import { WhatsAppCommunityButton } from "@/components/ui/whatsAppCommunityButton";
 
 export default function HomePage() {
   return (
@@ -11,10 +11,7 @@ export default function HomePage() {
       <StorytellingSection />
       <GoogleFormCTA />
       <ContactSection />
-      <ShareButton
-        url="https://achai-mu.vercel.app"
-        text="Opa, tudo bem? Lembrei de você! Achei esse site de achados e perdidos da faculdade. Dá uma olhada."
-      />
+      <WhatsAppCommunityButton communityUrl="https://chat.whatsapp.com/JCIyhKj6EqqJTTgCiP0foX?mode=wwt" />
     </main>
   );
 }
